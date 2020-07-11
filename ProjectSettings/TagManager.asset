@@ -9,6 +9,8 @@ TagManager:
   - Obstacle
   - VFX
   - ScoreDisplay
+  - TimeDisplay
+  - KillDisplay
   layers:
   - Default
   - TransparentFX

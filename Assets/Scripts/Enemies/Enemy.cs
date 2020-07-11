@@ -3,10 +3,12 @@
 public class Enemy : MonoBehaviour
 {
     //Reference Variables
-    private PlayerController player = null;
+    private PlayerHealth player = null;
 
     //Configuration Parameters
     [SerializeField] int enemyHealth = 100;
+    [SerializeField] int enemyDamage = 100;
+    [SerializeField] GameObject deathVFX = null;
 
     //State Variables
     private int currentHealth;
@@ -17,7 +19,7 @@ public class Enemy : MonoBehaviour
     }
 
     private void FindPlayer() {
-        player = FindObjectOfType<PlayerController>();
+        player = FindObjectOfType<PlayerHealth>();
         if (!player) {
             Debug.LogWarning("No Player Found To Follow In Scene");
             enabled = false;
@@ -34,6 +36,23 @@ public class Enemy : MonoBehaviour
 
     private void KillEnemy() {
         Destroy(gameObject);
+        SpawnDeathParticles();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.tag == "Player") {
+            DamagePlayer();
+            Destroy(gameObject);
+        }
+    }
+
+    private void SpawnDeathParticles() {
+        GameObject particles = Instantiate(deathVFX, transform.position, transform.rotation) as GameObject;
+        Destroy(particles, 1f);
+    }
+
+    private void DamagePlayer() {
+        player.DamagePlayer(enemyDamage);
     }
 
     //Public Methods
