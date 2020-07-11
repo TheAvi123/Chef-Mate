@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d0a5b3c66ba6a6045861a68a7b65dd98, type: 3}
-  m_Color: {r: 0, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -94,10 +94,9 @@ GameObject:
   - component: {fileID: 5694347075435524530}
   - component: {fileID: 4238613044750186574}
   - component: {fileID: 4444895498969903113}
-  - component: {fileID: 4238613044637270802}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,7 +180,8 @@ MonoBehaviour:
   rotationSpeed: 720
   startPosition: {x: 0, y: 0}
   dashCooldown: 5
-  dashSpeedMultiplier: 10
+  dashDuration: 0.15
+  dashSpeed: 50
 --- !u!114 &4444895498969903113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,42 +194,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e0cb28708080d4ea1be4a272dbe389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialPause: 10
+  initialPause: 1
   minimumPause: 2
   maximumPause: 5
   minimumDuration: 0
   maximumDuration: 5
   condimentArray:
-  - {fileID: 683111914830889686, guid: 251072d99aa1de246ab7dfb4f4171697, type: 3}
+  - {fileID: 683111914830889686, guid: 0af974be0feebda479c356a67dc114c4, type: 3}
   - {fileID: 683111914830889686, guid: ae91cfe7839a2eb43ab6f61ff6d00212, type: 3}
   - {fileID: 683111914830889686, guid: 49ed571039acb3747a909afc6ef27a09, type: 3}
   projectileParent: {fileID: 0}
---- !u!61 &4238613044637270802
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4238613044750186573}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &5666668316622922307
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +275,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d0a5b3c66ba6a6045861a68a7b65dd98, type: 3}
-  m_Color: {r: 0, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

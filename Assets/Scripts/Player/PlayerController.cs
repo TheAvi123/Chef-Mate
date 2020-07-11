@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -10,12 +9,12 @@ public class PlayerController : MonoBehaviour
     //Configuration Parameters
     [Header("Movement and Rotation")]
     [SerializeField] float moveSpeed = 15f;
-    [SerializeField] float rotationSpeed = 360f;
+    [SerializeField] float rotationSpeed = 720f;
     [SerializeField] Vector2 startPosition = new Vector2(0f, 0f);
 
     [Header("Movement and Rotation")]
     [SerializeField] float dashCooldown = 5f;
-    [SerializeField] float dashDuration = 0.5f;
+    [SerializeField] float dashDuration = 0.2f;
     [SerializeField] float dashSpeed = 50f;
 
     //Rotation State Variables
@@ -66,7 +65,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void RotateTowardsMouse() {
-        rigidBody.angularVelocity = 0;
+        rigidBody.angularVelocity = 0f;
         float maxRotationStep = rotationSpeed * Time.fixedDeltaTime;
         Quaternion newRotation = Quaternion.AngleAxis(lookAngle, Vector3.forward);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, newRotation, maxRotationStep);

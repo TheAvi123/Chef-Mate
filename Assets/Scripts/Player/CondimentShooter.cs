@@ -48,11 +48,11 @@ public class CondimentShooter : MonoBehaviour
     }
 
     private void Start() {
-        InitializeToRandomCondiment();
+        PickRandomCondiment();
         InitializeShootPause();
     }
 
-    private void InitializeToRandomCondiment() {
+    private void PickRandomCondiment() {
         int index = Random.Range(0, condimentArray.Length);
         currentCondiment = condimentArray[index];
     }
@@ -103,5 +103,10 @@ public class CondimentShooter : MonoBehaviour
             }
             yield return new WaitForSeconds(currentCondiment.GetShootDelay());
         }
+    }
+
+    //Public Methods
+    public void SwitchCondimentsRandomly() {
+        PickRandomCondiment();
     }
 }
