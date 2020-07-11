@@ -9,8 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7417822684688805232}
+<<<<<<< HEAD
   - component: {fileID: 1664813002072243651}
   - component: {fileID: 7958299470599137568}
+=======
+>>>>>>> origin/TempBranch
   - component: {fileID: 7417822684688805233}
   - component: {fileID: 683111914830889686}
   m_Layer: 0
@@ -29,11 +32,16 @@ Transform:
   m_GameObject: {fileID: 7417822684688805234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+=======
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+>>>>>>> origin/TempBranch
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!50 &1664813002072243651
 Rigidbody2D:
   serializedVersion: 4
@@ -81,6 +89,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+=======
+>>>>>>> origin/TempBranch
 --- !u!212 &7417822684688805233
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -121,7 +131,11 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d0a5b3c66ba6a6045861a68a7b65dd98, type: 3}
+<<<<<<< HEAD
   m_Color: {r: 0.6862745, g: 0.09803922, b: 0.039215688, a: 1}
+=======
+  m_Color: {r: 1, g: 0.090909086, b: 0, a: 1}
+>>>>>>> origin/TempBranch
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -144,8 +158,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   condimentPrefab: {fileID: 7417822684688805234}
+<<<<<<< HEAD
   condimentColor: {r: 0.6862745, g: 0.09803922, b: 0.039215688, a: 1}
   shootDelay: 0.2
   projectileSpeed: 25
   collisionVFX: {fileID: 216589535608600708, guid: 682e74ed24418b64e98f38acf4fcb0ed,
     type: 3}
+=======
+  shootDelay: 0.2
+  projectileSpeed: 25
+>>>>>>> origin/TempBranch
