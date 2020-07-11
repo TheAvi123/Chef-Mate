@@ -65,7 +65,7 @@ public class CondimentShooter : MonoBehaviour
     {
         ShootRandomly();
     }
-
+    
     private void ShootRandomly() {
         if (durationTicker > 0f) {
             durationTicker -= Time.deltaTime;
