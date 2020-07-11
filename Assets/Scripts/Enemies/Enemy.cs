@@ -3,14 +3,13 @@
 public class Enemy : MonoBehaviour
 {
     //Reference Variables
-<<<<<<< HEAD
     private PlayerController player = null;
 
     //Configuration Parameters
-
+    [SerializeField] int enemyHealth = 100;
 
     //State Variables
-
+    private int currentHealth;
 
     //Internal Methods
     private void Awake() {
@@ -23,26 +22,25 @@ public class Enemy : MonoBehaviour
             Debug.LogWarning("No Player Found To Follow In Scene");
             enabled = false;
         }
-=======
-    
-    //Configuration Parameters
-    
-    //State Variables
-    
-    //Internal Methods
-    private void Awake()
-    {
-        
     }
 
-    private void Start()
-    {
-        
->>>>>>> origin/TempBranch
+    private void Start() {
+        InitializeHealth();
     }
 
-    private void Update()
-    {
-        
+    private void InitializeHealth() {
+        currentHealth = enemyHealth;
+    }
+
+    private void KillEnemy() {
+        Destroy(gameObject);
+    }
+
+    //Public Methods
+    public void DamageEnemy(int damage) {
+        currentHealth -= damage;
+        if (currentHealth <= 0) {
+            KillEnemy();
+        }
     }
 }
