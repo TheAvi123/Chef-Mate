@@ -3,12 +3,16 @@ using System.Collections;
 
 public class CondimentShooter : MonoBehaviour
 {
+    //Reference Variables
+    private PlayerController playerController = null;
+
     //Configuration Parameters
     [Header("Shooter Parameters")]
-    [SerializeField] float minimumPause;
-    [SerializeField] float maximumPause;
-    [SerializeField] float minimumDuration;
-    [SerializeField] float maximumDuration;
+    [SerializeField] float initialPause = 10f;
+    [SerializeField] float minimumPause = 0f;
+    [SerializeField] float maximumPause = 0f;
+    [SerializeField] float minimumDuration = 0f;
+    [SerializeField] float maximumDuration = 0f;
 
     [Header("Projectiles")]
     [SerializeField] Condiment[] condimentArray = null;
@@ -22,14 +26,18 @@ public class CondimentShooter : MonoBehaviour
     private float durationTicker = 0f;
     private Coroutine shooterCoroutine = null;
 
-    //Mouse Tracking Variables
-    private float mouseXPosition, mouseYPosition;
-    private Vector2 mouseDirection;
-    private float lookAngle = 0;
-
     //Internal Methods
     private void Awake() {
+        FindPlayerController();
         CheckCondimentArray();
+    }
+
+    private void FindPlayerController() {
+        playerController = gameObject.GetComponent<PlayerController>();
+        if (!playerController) {
+            Debug.LogWarning("No Player Controller Component Found On Player");
+            enabled = false;
+        }
     }
 
     private void CheckCondimentArray() {
@@ -41,32 +49,23 @@ public class CondimentShooter : MonoBehaviour
 
     private void Start() {
         InitializeToRandomCondiment();
+        InitializeShootPause();
     }
 
     private void InitializeToRandomCondiment() {
-        int index = Random.Range(0, condimentArray.Length - 1);
+        int index = Random.Range(0, condimentArray.Length);
         currentCondiment = condimentArray[index];
+    }
+
+    private void InitializeShootPause() {
+        pauseTicker = initialPause;
     }
 
     private void Update()
     {
-        UpdateLookAngle();
-        LookAtMouse();
         ShootRandomly();
     }
-
-    private void UpdateLookAngle() {
-        mouseXPosition = Input.mousePosition.x;
-        mouseYPosition = Input.mousePosition.y;
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(new Vector2(mouseXPosition, mouseYPosition));
-        mouseDirection = (mousePosition - (Vector2) transform.position).normalized;
-        lookAngle = (Mathf.Atan2(mouseDirection.y, mouseDirection.x) * Mathf.Rad2Deg) - 90;
-    }
-
-    private void LookAtMouse() {
-        transform.rotation = Quaternion.AngleAxis(lookAngle, Vector3.forward);
-    }
-
+    
     private void ShootRandomly() {
         if (durationTicker > 0f) {
             durationTicker -= Time.deltaTime;
@@ -98,7 +97,7 @@ public class CondimentShooter : MonoBehaviour
             }
             Condiment condiment = projectile.GetComponent<Condiment>();
             if (condiment) {
-                condiment.SetMoveDirection(mouseDirection);
+                condiment.SetMoveDirection(playerController.GetMouseDirection());
             } else {
                 Debug.LogError("Spawned Projectile Does Not Have Condiment Component");
             }
