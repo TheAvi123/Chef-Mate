@@ -141,8 +141,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e0cb28708080d4ea1be4a272dbe389, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minimumPause: 2
+  maximumPause: 5
+  minimumDuration: 0
+  maximumDuration: 5
   condimentArray:
   - {fileID: 683111914830889686, guid: 251072d99aa1de246ab7dfb4f4171697, type: 3}
+  projectileParent: {fileID: 0}
 --- !u!1 &5666668316622922307
 GameObject:
   m_ObjectHideFlags: 0

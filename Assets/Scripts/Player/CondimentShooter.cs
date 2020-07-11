@@ -4,15 +4,23 @@ using System.Collections;
 public class CondimentShooter : MonoBehaviour
 {
     //Configuration Parameters
+    [Header("Shooter Parameters")]
+    [SerializeField] float minimumPause;
+    [SerializeField] float maximumPause;
+    [SerializeField] float minimumDuration;
+    [SerializeField] float maximumDuration;
+
+    [Header("Projectiles")]
     [SerializeField] Condiment[] condimentArray = null;
     [SerializeField] Transform projectileParent = null;
 
     //State Variables
     private Condiment currentCondiment = null;
 
-    //Private Shooting Variables
+    //Random Shooting Variables
+    private float pauseTicker = 0f;
+    private float durationTicker = 0f;
     private Coroutine shooterCoroutine = null;
-    private bool keepShooting = false;
 
     //Mouse Tracking Variables
     private float mouseXPosition, mouseYPosition;
@@ -44,7 +52,7 @@ public class CondimentShooter : MonoBehaviour
     {
         UpdateLookAngle();
         LookAtMouse();
-        CheckShootInput();
+        ShootRandomly();
     }
 
     private void UpdateLookAngle() {
@@ -59,21 +67,31 @@ public class CondimentShooter : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(lookAngle, Vector3.forward);
     }
 
-    private void CheckShootInput() {
-        if (Input.GetAxisRaw("Shoot") == 1 && shooterCoroutine == null) {
-            shooterCoroutine = StartCoroutine(ShootCondiments());
-            keepShooting = true;
-        } else if (Input.GetAxisRaw("Shoot") == 0 && shooterCoroutine != null) {
-            keepShooting = false;
-            StopCoroutine(shooterCoroutine);
-            shooterCoroutine = null;
+    private void ShootRandomly() {
+        if (durationTicker > 0f) {
+            durationTicker -= Time.deltaTime;
+            if (durationTicker < 0f) {
+                StopCoroutine(shooterCoroutine);
+                shooterCoroutine = null;
+            }
         } else {
+            if (pauseTicker > 0f) {
+                pauseTicker -= Time.deltaTime;
+            } else {
+                ChooseRandomShootValues();
+                shooterCoroutine = StartCoroutine(ShootCurrentCondiment());
+            }
         }
     }
 
-    private IEnumerator ShootCondiments() {
+    private void ChooseRandomShootValues() {
+        pauseTicker = Random.Range(minimumPause, maximumPause);
+        durationTicker = Random.Range(minimumDuration, maximumDuration);
+    }
+
+    private IEnumerator ShootCurrentCondiment() {
         GameObject condimentPrefab = currentCondiment.GetCondimentPrefab();
-        while (keepShooting) {
+        while (durationTicker > 0f) {
             GameObject projectile = Instantiate(condimentPrefab, transform.position, Quaternion.identity) as GameObject;
             if (projectileParent) {
                 projectile.transform.SetParent(projectileParent);
