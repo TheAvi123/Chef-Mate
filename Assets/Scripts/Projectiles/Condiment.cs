@@ -2,8 +2,6 @@
 
 public class Condiment : MonoBehaviour
 {
-    //Reference Variables
-
     //Configuration Parameters
     [SerializeField] GameObject condimentPrefab = null;
     [SerializeField] float shootDelay = 1f;
@@ -13,13 +11,13 @@ public class Condiment : MonoBehaviour
     private Vector2 moveDirection = new Vector2(0, 0);
     
     //Internal Methods
-    private void Update()
+    private void FixedUpdate()
     {
         MoveCondimentProjectile();
     }
 
     private void MoveCondimentProjectile() {
-        Vector2 displacement = moveDirection * projectileSpeed * Time.deltaTime;
+        Vector2 displacement = moveDirection * projectileSpeed * Time.fixedDeltaTime;
         transform.position = (Vector2) transform.position + displacement;
     }
 
