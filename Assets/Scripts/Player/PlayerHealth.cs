@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
     //Configuration Parameters
+    [SerializeField] TextMeshProUGUI healthDisplay = null;
     [SerializeField] int playerHealth = 100;
     [SerializeField] GameObject deathVFX = null;
 
@@ -16,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void InitializeHealth() {
         currentHealth = playerHealth;
+        UpdateHealthDisplay(false);
     }
 
     private void KillPlayer() {
@@ -29,11 +32,24 @@ public class PlayerHealth : MonoBehaviour
         Destroy(particles, 1f);
     }
 
+    private void UpdateHealthDisplay(bool dead) {
+        if (healthDisplay) {
+            if (dead) {
+                healthDisplay.text = "HEALTH: NONE";
+            } else {
+                healthDisplay.text = "HEALTH: " + currentHealth.ToString();
+            }
+        }
+    }
+
     //Public Methods
     public void DamagePlayer(int damage) {
         currentHealth -= damage;
         if (currentHealth <= 0) {
             KillPlayer();
+            UpdateHealthDisplay(true);
+        } else {
+            UpdateHealthDisplay(false);
         }
     }
 }

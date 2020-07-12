@@ -2,7 +2,7 @@
 
 public class Condiment : MonoBehaviour
 {
-    enum CondimentType {Ketchup, HotSauce, Mustard, Mayonaisse, Relish};
+    public enum CondimentType {HotSauce, Ketchup, Mayonaisse, Mustard, Relish};
 
     //Reference Variables
     private new Rigidbody2D rigidbody = null;
@@ -77,6 +77,10 @@ public class Condiment : MonoBehaviour
     //Public Methods
     public GameObject GetCondimentPrefab() {
         return condimentPrefab;
+    }
+
+    public Color GetCondimentColor() {
+        return condimentColor;
     }
 
     public float GetShootDelay() {

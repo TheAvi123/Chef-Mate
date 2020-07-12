@@ -387,5 +387,30 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6810120729801687875, guid: 1d83ac3ff125fe149a0c094948cc9aaa,
+        type: 3}
+      propertyPath: m_text
+      value: CHEF-MATE
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810120729801687875, guid: 1d83ac3ff125fe149a0c094948cc9aaa,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810120729801687875, guid: 1d83ac3ff125fe149a0c094948cc9aaa,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810120729801687875, guid: 1d83ac3ff125fe149a0c094948cc9aaa,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810120729801687875, guid: 1d83ac3ff125fe149a0c094948cc9aaa,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 2.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d83ac3ff125fe149a0c094948cc9aaa, type: 3}

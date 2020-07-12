@@ -28,6 +28,7 @@ public class StatsManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "PlayScene") {
             ToggleRunTimeTracking(true);
             ResetStats();
+            DisplayScoreStat();
         }
         if (SceneManager.GetActiveScene().name == "GameOver") {
             ToggleRunTimeTracking(false);
@@ -39,6 +40,10 @@ public class StatsManager : MonoBehaviour
         score = 0;
         survivalTime = 0;
         enemiesKilled = 0;
+    }
+
+    private void DisplayScoreStat() {
+        FindStatObjectByTag("ScoreDisplay").text = "SCORE: " + score.ToString();
     }
 
     private void DisplayRunStats() {
@@ -89,6 +94,7 @@ public class StatsManager : MonoBehaviour
     //Public Methods
     public void AddScore(int amount) {
         score += amount;
+        DisplayScoreStat();
     }
 
     public void AddEnemyKill() {

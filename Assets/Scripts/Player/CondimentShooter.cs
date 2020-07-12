@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using TMPro;
+using UnityEngine.UI;
 
 public class CondimentShooter : MonoBehaviour
 {
     //Reference Variables
     private PlayerController playerController = null;
+    private TextMeshProUGUI condimentDisplay = null;
 
     //Configuration Parameters
     [Header("Shooter Parameters")]
@@ -29,6 +32,7 @@ public class CondimentShooter : MonoBehaviour
     //Internal Methods
     private void Awake() {
         FindPlayerController();
+        FindCondimentDisplay();
         CheckCondimentArray();
     }
 
@@ -38,6 +42,10 @@ public class CondimentShooter : MonoBehaviour
             Debug.LogWarning("No Player Controller Component Found On Player");
             enabled = false;
         }
+    }
+
+    private void FindCondimentDisplay() {
+        condimentDisplay = GameObject.FindGameObjectWithTag("CondimentDisplay").GetComponent<TextMeshProUGUI>();
     }
 
     private void CheckCondimentArray() {
@@ -55,6 +63,7 @@ public class CondimentShooter : MonoBehaviour
     private void PickRandomCondiment() {
         int index = Random.Range(0, condimentArray.Length);
         currentCondiment = condimentArray[index];
+        DisplayCurrentCondiment();
     }
 
     private void InitializeShootPause() {
@@ -105,8 +114,16 @@ public class CondimentShooter : MonoBehaviour
         }
     }
 
+    private void DisplayCurrentCondiment() {
+        if (condimentDisplay) {
+            condimentDisplay.text = currentCondiment.gameObject.name.ToUpper();
+            condimentDisplay.color = currentCondiment.GetCondimentPrefab().GetComponent<Condiment>().GetCondimentColor();
+        }
+    }
+
     //Public Methods
-    public void SwitchCondimentsRandomly() {
-        PickRandomCondiment();
+    public void SwitchCondiments(int index) {
+        currentCondiment = condimentArray[index];
+        DisplayCurrentCondiment();
     }
 }

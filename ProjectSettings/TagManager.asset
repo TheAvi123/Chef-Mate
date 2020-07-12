@@ -11,6 +11,9 @@ TagManager:
   - ScoreDisplay
   - TimeDisplay
   - KillDisplay
+  - HealthDisplay
+  - CondimentDisplay
+  - VoiceDisplay
   layers:
   - Default
   - TransparentFX
