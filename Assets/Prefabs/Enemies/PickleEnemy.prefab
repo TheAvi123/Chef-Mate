@@ -151,9 +151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8d3c305d4c94647af63796cdd96b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 100
-  enemyDamage: 100
-  enemyScore: 100
+  enemyHealth: 200
+  enemyDamage: 10
+  enemyScore: 200
   deathVFX: {fileID: 2715088018097412412, guid: 312595f5b47fb8e409414012817d9d70,
     type: 3}
 --- !u!114 &5522568089499189206

@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 100
-  enemyDamage: 100
+  enemyDamage: 20
   enemyScore: 100
   deathVFX: {fileID: 2715088018097412412, guid: 312595f5b47fb8e409414012817d9d70,
     type: 3}
