@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7958299470599137568}
   - component: {fileID: 7417822684688805233}
   - component: {fileID: 683111914830889686}
+  - component: {fileID: 6464728409178941087}
   m_Layer: 0
   m_Name: Relish
   m_TagString: Projectile
@@ -150,3 +151,15 @@ MonoBehaviour:
   projectileSpeed: 25
   collisionVFX: {fileID: 216589535608600708, guid: 682e74ed24418b64e98f38acf4fcb0ed,
     type: 3}
+--- !u!114 &6464728409178941087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417822684688805234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad05be4432de4bd4c9566cad961f10b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
