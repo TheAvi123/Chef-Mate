@@ -1,9 +1,8 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class CutScene : MonoBehaviour
+public class CutsceneManager : MonoBehaviour
 {
     public GameObject Panel1;
     public GameObject Panel2;

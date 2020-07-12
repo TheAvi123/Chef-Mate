@@ -64,7 +64,7 @@ MonoBehaviour:
   playSceneName: PlayScene
   gameOverSceneName: GameOver
   instructionSceneName: Instructions
-  cutSceneName: CutScene
+  cutSceneName: Cutscene
   startFromInitialState: 1
   initialState: 1
 --- !u!114 &8854357396512095463
