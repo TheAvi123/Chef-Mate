@@ -1,5 +1,13 @@
 fileFormatVersion: 2
-guid: 2cda990e2423bbf4892e6590ba056729
+<<<<<<< HEAD
+<<<<<<<< HEAD:Assets/Scenes/PlayScene.unity.meta
+guid: cb7a37ccfc541534fb061d4d548afad2
+========
+guid: b4ada67ba1065804d8904f5a00921a3f
+>>>>>>>> origin/TempBranch:Assets/Scenes/BurgerRoom.unity.meta
+=======
+guid: 71d4ae0ff02e64340bb37685f3abf793
+>>>>>>> origin/TempBranch
 DefaultImporter:
   externalObjects: {}
   userData: 
