@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Pathfinding;
 
 public class Enemy : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Enemy : MonoBehaviour
     //Internal Methods
     private void Awake() {
         FindPlayer();
+        SetPathfindingTarget();
     }
 
     private void FindPlayer() {
@@ -24,6 +26,12 @@ public class Enemy : MonoBehaviour
         if (!player) {
             Debug.LogWarning("No Player Found To Follow In Scene");
             enabled = false;
+        }
+    }
+
+    private void SetPathfindingTarget() {
+        if (player) {
+            gameObject.GetComponent<AIDestinationSetter>().target = player.gameObject.transform;
         }
     }
 

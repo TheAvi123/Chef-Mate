@@ -34,6 +34,11 @@ public class Condiment : MonoBehaviour
         }
     }
 
+    private void SetProjectileRotation() {
+        float lookAngle = (Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg) - 180;
+        transform.rotation = Quaternion.Euler(0, 0, lookAngle);
+    }
+
     private void FixedUpdate() {
         MoveCondimentProjectile();
     }
@@ -59,6 +64,7 @@ public class Condiment : MonoBehaviour
 
     private void SpawnCollisionParticles() {
         GameObject particles = Instantiate(collisionVFX, transform.position, transform.rotation) as GameObject;
+        particles.transform.SetParent(gameObject.transform.parent);
         ParticleSystem.MainModule particleSettings = particles.GetComponent<ParticleSystem>().main;
         particleSettings.startColor = condimentColor;
         Destroy(particles, 1f);
@@ -79,5 +85,6 @@ public class Condiment : MonoBehaviour
 
     public void SetMoveDirection(Vector2 direction) {
         moveDirection = direction;
+        SetProjectileRotation();
     }
 }
