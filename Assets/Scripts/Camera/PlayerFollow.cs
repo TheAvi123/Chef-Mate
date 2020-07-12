@@ -18,7 +18,7 @@ public class PlayerFollow : MonoBehaviour
     {
         player = FindObjectOfType<PlayerController>();
         if (!player) {
-            Debug.LogWarning("No Player Found To Follow In Scene");
+            Debug.Log("No Player Found To Follow In Scene");
             enabled = false;
         }
     }

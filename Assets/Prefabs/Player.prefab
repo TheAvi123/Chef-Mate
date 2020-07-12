@@ -127,6 +127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5e3841a3ad906428f9b1afa2a6f018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+  healthDisplay: {fileID: 0}
+>>>>>>> dracoBranch
   playerHealth: 100
   deathVFX: {fileID: 3780796190994182437, guid: af81215f2159ccd4e9ce5646980935f9,
     type: 3}

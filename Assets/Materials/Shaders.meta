@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Materials/Shaders.meta
 guid: ac2539d0eb2d9c041a23211cf67277bc
+=======
+guid: 621b13b9c8b3ca645b2d6334140bf03c
+>>>>>>> dracoBranch:Assets/Editor.meta
+=======
+guid: ac2539d0eb2d9c041a23211cf67277bc
+>>>>>>> dracoBranch
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

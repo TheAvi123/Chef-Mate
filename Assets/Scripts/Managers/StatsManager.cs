@@ -28,6 +28,10 @@ public class StatsManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "PlayScene") {
             ToggleRunTimeTracking(true);
             ResetStats();
+<<<<<<< HEAD
+=======
+            DisplayScoreStat();
+>>>>>>> dracoBranch
         }
         if (SceneManager.GetActiveScene().name == "GameOver") {
             ToggleRunTimeTracking(false);
@@ -41,6 +45,13 @@ public class StatsManager : MonoBehaviour
         enemiesKilled = 0;
     }
 
+<<<<<<< HEAD
+=======
+    private void DisplayScoreStat() {
+        FindStatObjectByTag("ScoreDisplay").text = "SCORE: " + score.ToString();
+    }
+
+>>>>>>> dracoBranch
     private void DisplayRunStats() {
         FindStatObjectByTag("ScoreDisplay").text = "SCORE: " + score.ToString();
         FindStatObjectByTag("TimeDisplay").text  = "TIME SURVIVED: " + TimeToString(survivalTime);
@@ -89,6 +100,10 @@ public class StatsManager : MonoBehaviour
     //Public Methods
     public void AddScore(int amount) {
         score += amount;
+<<<<<<< HEAD
+=======
+        DisplayScoreStat();
+>>>>>>> dracoBranch
     }
 
     public void AddEnemyKill() {

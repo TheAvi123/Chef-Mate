@@ -183,6 +183,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 7315310357057681144, guid: fd04368d01d524c468addb6af5d54dca,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315310357057681144, guid: fd04368d01d524c468addb6af5d54dca,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315310357057681144, guid: fd04368d01d524c468addb6af5d54dca,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.39215687
+      objectReference: {fileID: 0}
+>>>>>>> dracoBranch
     - target: {fileID: 7315310357057681147, guid: fd04368d01d524c468addb6af5d54dca,
         type: 3}
       propertyPath: m_Name
@@ -387,5 +405,76 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 389537982}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 5216162359510988904, guid: 2ce90349825b922439da38e09a170f43,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216162359510988904, guid: 2ce90349825b922439da38e09a170f43,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216162359510988904, guid: 2ce90349825b922439da38e09a170f43,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216162359510988904, guid: 2ce90349825b922439da38e09a170f43,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216162359510988904, guid: 2ce90349825b922439da38e09a170f43,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216162359510988904, guid: 2ce90349825b922439da38e09a170f43,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216162359510988904, guid: 2ce90349825b922439da38e09a170f43,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216162359510988911, guid: 2ce90349825b922439da38e09a170f43,
+        type: 3}
+      propertyPath: m_text
+      value: "MOVEMENT: WASD OR ARROW KEYS\nDASH: SPACE OR LMB\n\nYOUR SAUCE GUN
+        IS OUT OF CONTROL. \nYOU CANNOT DECIDE WHEN TO SHOOT AND HOW MUCH TO SHOOT.\n\nWALK
+        TO CONDIMENT DISPENSERS TO SWITCH THE CONDIMENT IN YOUR GUN. \nYOU MUST SAUCE
+        ALL THE FOOD YOU CAN OR DIE TRYING."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216162359510988911, guid: 2ce90349825b922439da38e09a170f43,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216162359510988911, guid: 2ce90349825b922439da38e09a170f43,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216162359510988911, guid: 2ce90349825b922439da38e09a170f43,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 257
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216162359510988911, guid: 2ce90349825b922439da38e09a170f43,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 5216162359510988911, guid: 2ce90349825b922439da38e09a170f43,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 49
+      objectReference: {fileID: 0}
+>>>>>>> dracoBranch
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ce90349825b922439da38e09a170f43, type: 3}

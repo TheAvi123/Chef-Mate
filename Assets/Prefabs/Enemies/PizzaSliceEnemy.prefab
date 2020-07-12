@@ -10,6 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9036624372537329011}
   - component: {fileID: 4094478763896563155}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 203571492985634234}
+>>>>>>> dracoBranch
   m_Layer: 0
   m_Name: EnemySprite
   m_TagString: Untagged
@@ -24,13 +28,21 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4094478763896563156}
+<<<<<<< HEAD
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+=======
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+>>>>>>> dracoBranch
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5522568089499189223}
   m_RootOrder: 0
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+>>>>>>> dracoBranch
 --- !u!212 &4094478763896563155
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -81,6 +93,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
+=======
+--- !u!58 &203571492985634234
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4094478763896563156}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+>>>>>>> dracoBranch
 --- !u!1 &5522568089499189210
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +122,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5522568089499189223}
   - component: {fileID: 5554441954918772222}
+<<<<<<< HEAD
   - component: {fileID: 7940111452718560890}
+=======
+>>>>>>> dracoBranch
   - component: {fileID: 5522568089499189211}
   - component: {fileID: 5522568089499189206}
   - component: {fileID: 5522568089499189205}
@@ -139,6 +173,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+<<<<<<< HEAD
 --- !u!61 &7940111452718560890
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165,6 +200,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+=======
+>>>>>>> dracoBranch
 --- !u!114 &5522568089499189211
 MonoBehaviour:
   m_ObjectHideFlags: 0

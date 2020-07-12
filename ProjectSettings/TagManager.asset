@@ -11,6 +11,12 @@ TagManager:
   - ScoreDisplay
   - TimeDisplay
   - KillDisplay
+<<<<<<< HEAD
+=======
+  - HealthDisplay
+  - CondimentDisplay
+  - VoiceDisplay
+>>>>>>> dracoBranch
   layers:
   - Default
   - TransparentFX

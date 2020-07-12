@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 ﻿using UnityEngine;
+=======
+﻿using TMPro;
+using UnityEngine;
+>>>>>>> dracoBranch
 
 public class PlayerHealth : MonoBehaviour
 {
     //Configuration Parameters
+<<<<<<< HEAD
+=======
+    [SerializeField] TextMeshProUGUI healthDisplay = null;
+>>>>>>> dracoBranch
     [SerializeField] int playerHealth = 100;
     [SerializeField] GameObject deathVFX = null;
 
@@ -16,6 +25,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void InitializeHealth() {
         currentHealth = playerHealth;
+<<<<<<< HEAD
+=======
+        UpdateHealthDisplay(false);
+>>>>>>> dracoBranch
     }
 
     private void KillPlayer() {
@@ -29,11 +42,30 @@ public class PlayerHealth : MonoBehaviour
         Destroy(particles, 1f);
     }
 
+<<<<<<< HEAD
+=======
+    private void UpdateHealthDisplay(bool dead) {
+        if (healthDisplay) {
+            if (dead) {
+                healthDisplay.text = "HEALTH: NONE";
+            } else {
+                healthDisplay.text = "HEALTH: " + currentHealth.ToString();
+            }
+        }
+    }
+
+>>>>>>> dracoBranch
     //Public Methods
     public void DamagePlayer(int damage) {
         currentHealth -= damage;
         if (currentHealth <= 0) {
             KillPlayer();
+<<<<<<< HEAD
+=======
+            UpdateHealthDisplay(true);
+        } else {
+            UpdateHealthDisplay(false);
+>>>>>>> dracoBranch
         }
     }
 }

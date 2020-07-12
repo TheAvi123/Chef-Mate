@@ -183,6 +183,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 7315310357057681144, guid: fd04368d01d524c468addb6af5d54dca,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315310357057681144, guid: fd04368d01d524c468addb6af5d54dca,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.39215687
+      objectReference: {fileID: 0}
+    - target: {fileID: 7315310357057681144, guid: fd04368d01d524c468addb6af5d54dca,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.39215687
+      objectReference: {fileID: 0}
+>>>>>>> dracoBranch
     - target: {fileID: 7315310357057681147, guid: fd04368d01d524c468addb6af5d54dca,
         type: 3}
       propertyPath: m_Name

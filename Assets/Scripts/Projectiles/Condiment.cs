@@ -2,7 +2,11 @@
 
 public class Condiment : MonoBehaviour
 {
+<<<<<<< HEAD
     enum CondimentType {Ketchup, HotSauce, Mustard, Mayonaisse, Relish};
+=======
+    public enum CondimentType {HotSauce, Ketchup, Mayonaisse, Mustard, Relish};
+>>>>>>> dracoBranch
 
     //Reference Variables
     private new Rigidbody2D rigidbody = null;
@@ -34,6 +38,14 @@ public class Condiment : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
+=======
+    private void SetProjectileRotation() {
+        float lookAngle = (Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg) - 180;
+        transform.rotation = Quaternion.Euler(0, 0, lookAngle);
+    }
+
+>>>>>>> dracoBranch
     private void FixedUpdate() {
         MoveCondimentProjectile();
     }
@@ -59,6 +71,10 @@ public class Condiment : MonoBehaviour
 
     private void SpawnCollisionParticles() {
         GameObject particles = Instantiate(collisionVFX, transform.position, transform.rotation) as GameObject;
+<<<<<<< HEAD
+=======
+        particles.transform.SetParent(gameObject.transform.parent);
+>>>>>>> dracoBranch
         ParticleSystem.MainModule particleSettings = particles.GetComponent<ParticleSystem>().main;
         particleSettings.startColor = condimentColor;
         Destroy(particles, 1f);
@@ -73,11 +89,16 @@ public class Condiment : MonoBehaviour
         return condimentPrefab;
     }
 
+    public Color GetCondimentColor() {
+        return condimentColor;
+    }
+
     public float GetShootDelay() {
         return shootDelay;
     }
 
     public void SetMoveDirection(Vector2 direction) {
         moveDirection = direction;
+        SetProjectileRotation();
     }
 }

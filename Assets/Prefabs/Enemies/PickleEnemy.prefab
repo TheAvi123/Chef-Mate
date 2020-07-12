@@ -91,11 +91,18 @@ GameObject:
   m_Component:
   - component: {fileID: 5522568089499189223}
   - component: {fileID: 5554441954918772222}
+<<<<<<< HEAD
   - component: {fileID: 7940111452718560890}
+=======
+>>>>>>> dracoBranch
   - component: {fileID: 5522568089499189211}
   - component: {fileID: 5522568089499189206}
   - component: {fileID: 5522568089499189205}
   - component: {fileID: 5522568089499189204}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 1423151095120086992}
+>>>>>>> dracoBranch
   m_Layer: 0
   m_Name: PickleEnemy
   m_TagString: Enemy
@@ -139,6 +146,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+<<<<<<< HEAD
 --- !u!61 &7940111452718560890
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165,6 +173,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+=======
+>>>>>>> dracoBranch
 --- !u!114 &5522568089499189211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,9 +187,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8d3c305d4c94647af63796cdd96b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   enemyHealth: 100
   enemyDamage: 100
   enemyScore: 100
+=======
+  enemyHealth: 200
+  enemyDamage: 10
+  enemyScore: 200
+>>>>>>> dracoBranch
   deathVFX: {fileID: 2715088018097412412, guid: 312595f5b47fb8e409414012817d9d70,
     type: 3}
 --- !u!114 &5522568089499189206
@@ -260,3 +276,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+<<<<<<< HEAD
+=======
+--- !u!70 &1423151095120086992
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5522568089499189210}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.7, y: 1.5}
+  m_Direction: 0
+>>>>>>> dracoBranch
