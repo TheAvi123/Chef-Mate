@@ -3,7 +3,7 @@
 public class CondimentDispenser : MonoBehaviour
 {
     //Configuration Parameters
-    [SerializeField] Condiment.CondimentType condimentType;
+    [SerializeField] Condiment.CondimentType condimentType = 0;
 
     //Internal Methods
     private void OnTriggerEnter2D(Collider2D collision) {
