@@ -21,10 +21,7 @@ public class PlayerHealth : MonoBehaviour
     private void KillPlayer() {
         Destroy(gameObject);
         SpawnDeathParticles();
-        Debug.Log(1);
-        Debug.Log(GameStateManager.sharedInstance);
         GameStateManager.sharedInstance.GameOver(2f);
-        Debug.Log(1);
     }
 
     private void SpawnDeathParticles() {

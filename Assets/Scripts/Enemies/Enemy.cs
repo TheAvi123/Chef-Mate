@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     //Configuration Parameters
     [SerializeField] int enemyHealth = 100;
     [SerializeField] int enemyDamage = 100;
+    [SerializeField] int enemyScore = 100;
     [SerializeField] GameObject deathVFX = null;
 
     //State Variables
@@ -37,6 +38,8 @@ public class Enemy : MonoBehaviour
     private void KillEnemy() {
         Destroy(gameObject);
         SpawnDeathParticles();
+        StatsManager.sharedInstance.AddEnemyKill();
+        StatsManager.sharedInstance.AddScore(enemyScore);
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {

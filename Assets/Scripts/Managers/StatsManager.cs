@@ -42,7 +42,7 @@ public class StatsManager : MonoBehaviour
     }
 
     private void DisplayRunStats() {
-        FindStatObjectByTag("ScoreDisplau").text = "SCORE: " + score.ToString();
+        FindStatObjectByTag("ScoreDisplay").text = "SCORE: " + score.ToString();
         FindStatObjectByTag("TimeDisplay").text  = "TIME SURVIVED: " + TimeToString(survivalTime);
         FindStatObjectByTag("KillDisplay").text  = "ENEMIES KILLED: " + enemiesKilled.ToString();
     }
@@ -54,21 +54,21 @@ public class StatsManager : MonoBehaviour
 
     private string TimeToString(float seconds) {
         if (seconds < 60) {
-            return seconds.ToString("F1") + "s";
+            return seconds.ToString("F1") + " SEC";
         }
         int minutes = (int)(seconds / 60);
         seconds = seconds - (minutes * 60);
         if (minutes < 60) {
-            return minutes.ToString() + "m " + seconds.ToString("F0") + "s";
+            return minutes.ToString() + " M " + seconds.ToString("F0") + " S";
         }
         int hours = minutes / 60;
         minutes = minutes - (hours * 60);
         if (hours < 24) {
-            return hours.ToString() + "h " + minutes.ToString() + "m";
+            return hours.ToString() + " H " + minutes.ToString() + " M";
         }
         int days = hours / 24;
         hours = hours - (days * 24);
-        return days.ToString() + "d " + hours.ToString() + "h ";
+        return days.ToString() + " D " + hours.ToString() + " H";
     }
     #endregion
 
